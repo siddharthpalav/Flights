@@ -26,39 +26,15 @@ Let's take a look inside the `src` folder
   npm install
   ```
 - In the root directory create `.env` file and add the following env variables
+
   ```
      PORT=<port number of your choice>
   ```
+
   ex:
-  ```
-     PORT=3000
-  ```
-- Inside the `src/config` folder create a file named as `config.json` and write the following code:
 
   ```
-  {
-  "development": {
-    "username": "root",
-    "password": "mypassword",
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-  }
+     PORT=3000
   ```
 
 - go inside the `src` folder and execute the following command:
