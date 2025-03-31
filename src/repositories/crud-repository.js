@@ -18,6 +18,12 @@ class CrudRepository {
         id: data,
       },
     });
+    if (!response) {
+      throw new AppError(
+        "Not able to find the resourse",
+        StatusCodes.NOT_FOUND
+      );
+    }
     return response;
   }
 
@@ -44,6 +50,12 @@ class CrudRepository {
         id: id,
       },
     });
+    if (response[0] === 0) {
+      throw new AppError(
+        "Not able to find the resourse",
+        StatusCodes.NOT_FOUND
+      );
+    }
     return response;
   }
 }
