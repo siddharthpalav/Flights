@@ -41,3 +41,24 @@ module.exports = {
     await queryInterface.dropTable("Airports");
   },
 };
+
+/**
+ *
+ * CREATE TABLE Customer(
+ * id INT NOTNULL AUTOINCREMENT,
+ * name VARCHAR2(20),
+ * city VARCHAR2(20),
+ * PRIMARY KEY(id));
+ */
+
+/**
+ * CREATE TABLE Contact(
+ * id INT NOTNULL AUTOINCREMENT,
+ * customerId INT NOTNULL,
+ * customerInfo VARCHAR2(20) NOTNULL,
+ * INDEX par_ind(customerId),
+ * CONSTRAINT fk_customer FOREIGN KEY(customerId)
+ * REFERENCES Customer(id)
+ * ON DELECT CASCADE
+ * ON UPDATE CASCADE)
+ */
